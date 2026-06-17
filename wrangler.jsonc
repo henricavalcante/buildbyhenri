@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "buildbyhenri",
+  "compatibility_date": "2026-06-17",
+  // Static-assets-only Worker: serve the Vite build output (dist/).
+  // No Worker script (no "main") — this is a pure static site.
+  "assets": {
+    "directory": "./dist"
+  }
+}
