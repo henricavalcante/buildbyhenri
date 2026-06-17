@@ -13,6 +13,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         loadtests: resolve(__dirname, "loadtests.html"),
+        consulting: resolve(__dirname, "consulting.html"),
+        apps: resolve(__dirname, "apps.html"),
       },
     },
   },
