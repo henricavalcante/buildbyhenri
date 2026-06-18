@@ -8,6 +8,7 @@ import {
   useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakToggle,
 } from "../shared/tweaks-panel.jsx";
 import { BBH_STRINGS } from "./strings.js";
+import { getInitialLang, persistLang } from "../shared/lang.js";
 
 const { useState, useEffect } = React;
 
@@ -160,9 +161,11 @@ function BBHFooter({ s }) {
 
 /* ────────── App ────────── */
 function BBHApp() {
-  const [t, setTweak] = useTweaks(BBH_TWEAK_DEFAULTS);
+  const [t, setTweak] = useTweaks({ ...BBH_TWEAK_DEFAULTS, lang: getInitialLang() });
   const lang = t.lang === "pt" ? "pt" : "en";
   const s = BBH_STRINGS[lang];
+
+  const setLang = (l) => { persistLang(l); setTweak("lang", l); };
 
   useEffect(() => {
     document.documentElement.dataset.theme = t.dark ? "dark" : "light";
@@ -171,7 +174,7 @@ function BBHApp() {
 
   return (
     <>
-      <BBHNav s={s} lang={lang} setLang={(l) => setTweak("lang", l)} />
+      <BBHNav s={s} lang={lang} setLang={setLang} />
       <main>
         <BBHHero s={s} />
         <BBHServices s={s} />
@@ -182,7 +185,7 @@ function BBHApp() {
         <TweakSection label="Language" />
         <TweakRadio label="Locale" value={lang}
           options={["en", "pt"]}
-          onChange={(v) => setTweak("lang", v)} />
+          onChange={setLang} />
 
         <TweakSection label="Theme" />
         <TweakToggle label="Dark mode" value={t.dark}

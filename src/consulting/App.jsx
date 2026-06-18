@@ -10,6 +10,7 @@ import {
   TweakColor, TweakToggle,
 } from "../shared/tweaks-panel.jsx";
 import { STRINGS } from "./strings.js";
+import { getInitialLang, persistLang } from "../shared/lang.js";
 
 const { useState, useEffect } = React;
 
@@ -71,7 +72,7 @@ function Nav({ s, lang, setLang }) {
   return (
     <header className={"nav" + (scrolled ? " is-scrolled" : "")}>
       <div className="container nav-inner">
-        <a href="#top" className="brand" aria-label="BBH consulting">
+        <a href="./index.html" className="brand" aria-label="BBH consulting">
           <BBHLogo size={28} />
           <span>BBH<small> / consulting</small></span>
         </a>
@@ -285,7 +286,7 @@ function Footer({ s }) {
 /* ────────── App ────────── */
 
 function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [t, setTweak] = useTweaks({ ...TWEAK_DEFAULTS, lang: getInitialLang() });
 
   const lang = t.lang === "pt" ? "pt" : "en";
   const s = STRINGS[lang];
@@ -297,7 +298,7 @@ function App() {
     document.documentElement.lang = s.locale;
   }, [t.dark, t.display, t.accent, s.locale]);
 
-  const setLang = (l) => setTweak("lang", l);
+  const setLang = (l) => { persistLang(l); setTweak("lang", l); };
 
   return (
     <>
@@ -313,7 +314,7 @@ function App() {
         <TweakSection label="Language" />
         <TweakRadio label="Locale" value={lang}
           options={["en", "pt"]}
-          onChange={(v) => setTweak("lang", v)} />
+          onChange={setLang} />
 
         <TweakSection label="Theme" />
         <TweakSelect label="Display font" value={t.display || "hanken"}
