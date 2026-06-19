@@ -1,77 +1,60 @@
 /* i18n dictionary — Apps showcase · EN + PT-BR */
 
 /* ──────────────────────────────────────────────────────────────
-   PLACEHOLDER apps — swap these for the real BBH products + real
-   live/store URLs (and screenshots in .app-thumb) later. Every
-   href is "#" on purpose for now.
+   BuildByHenri products — real. Verify/expand the stacks (Luugo's
+   in particular) and statuses as they evolve.
    ────────────────────────────────────────────────────────────── */
 const APPS_EN = [
   {
-    name: "Lumo",
+    name: "ALRA",
     status: "live",
-    oneLiner: "Personal finance that actually sticks.",
-    desc: "A budgeting app that turns messy bank feeds into one calm weekly number — built to be opened in ten seconds, not studied.",
-    stack: ["React Native", "Expo", "TypeScript", "Supabase"],
-    href: "#",
+    oneLiner: "Your health, at your own pace.",
+    desc: "An AI health companion that lives in WhatsApp, Telegram, and an app — logging nutrition, training, sleep, hydration, mood, and habits, with personalized coaching across six wellness pillars.",
+    stack: ["FastAPI", "LangGraph", "React Native", "PostgreSQL", "WhatsApp"],
+    href: "https://alra.health",
   },
   {
-    name: "Cadence",
+    name: "Luugo",
+    status: "live",
+    oneLiner: "Buy, sell, and trade — close to you.",
+    desc: "A Brazilian marketplace for items, services, places, and vehicles — local classifieds in a clean, modern web app.",
+    stack: ["Flutter", "TypeScript", "Go", "MySQL"],
+    href: "https://luugo.com.br",
+  },
+  {
+    name: "Stageboard",
     status: "beta",
-    oneLiner: "Habits that survive a bad week.",
-    desc: "A routine tracker that bends instead of breaking when life gets in the way — streaks you don't end up resenting.",
-    stack: ["Next.js", "TypeScript", "PostgreSQL"],
-    href: "#",
-  },
-  {
-    name: "Forkful",
-    status: "live",
-    oneLiner: "Dinner, decided.",
-    desc: "Recipes and meal planning for people who cook for real — pantry-aware, shopping-list-first, zero life-story preamble.",
-    stack: ["React Native", "Expo", "tRPC"],
-    href: "#",
-  },
-  {
-    name: "Tonal",
-    status: "wip",
-    oneLiner: "A practice room in your browser.",
-    desc: "An ear-training and practice tool for musicians on the Web Audio API — metronome, drills, and progress that stays honest.",
-    stack: ["Next.js", "Web Audio", "Tailwind"],
-    href: "#",
+    oneLiner: "Your band's control panel on stage.",
+    desc: "A mobile-first PWA for bands on stage — shared setlists and chord charts that turn the page for everyone in real time, even offline.",
+    stack: ["Elixir", "Phoenix LiveView", "PostgreSQL", "Tailwind"],
+    href: "https://stageboard.buildbyhenri.com",
   },
 ];
 
 const APPS_PT = [
   {
-    name: "Lumo",
+    name: "ALRA",
     status: "live",
-    oneLiner: "Finança pessoal que gruda de verdade.",
-    desc: "App de orçamento que transforma extrato bagunçado num número semanal tranquilo — feito pra abrir em dez segundos, não pra estudar.",
-    stack: ["React Native", "Expo", "TypeScript", "Supabase"],
-    href: "#",
+    oneLiner: "Sua saúde no seu ritmo.",
+    desc: "Um companheiro de saúde com IA que vive no WhatsApp, no Telegram e num app — registra nutrição, treino, sono, hidratação, humor e hábitos, com coaching personalizado nos seis pilares do bem-estar.",
+    stack: ["FastAPI", "LangGraph", "React Native", "PostgreSQL", "WhatsApp"],
+    href: "https://alra.health",
   },
   {
-    name: "Cadence",
+    name: "Luugo",
+    status: "live",
+    oneLiner: "Compre, venda e troque — pertinho de você.",
+    desc: "Um marketplace brasileiro de produtos, serviços, lugares e veículos — classificados locais num app web limpo e moderno.",
+    stack: ["Flutter", "TypeScript", "Go", "MySQL"],
+    href: "https://luugo.com.br",
+  },
+  {
+    name: "Stageboard",
     status: "beta",
-    oneLiner: "Hábito que sobrevive a uma semana ruim.",
-    desc: "Tracker de rotina que dobra em vez de quebrar quando a vida atravessa — streak que você não passa a odiar.",
-    stack: ["Next.js", "TypeScript", "PostgreSQL"],
-    href: "#",
-  },
-  {
-    name: "Forkful",
-    status: "live",
-    oneLiner: "Jantar, resolvido.",
-    desc: "Receitas e planejamento de refeição pra quem cozinha de verdade — sabe o que tem na despensa, começa pela lista de compras, sem textão.",
-    stack: ["React Native", "Expo", "tRPC"],
-    href: "#",
-  },
-  {
-    name: "Tonal",
-    status: "wip",
-    oneLiner: "Uma sala de ensaio no navegador.",
-    desc: "Ferramenta de treino auditivo e prática pra músicos, em cima da Web Audio API — metrônomo, exercícios e progresso honesto.",
-    stack: ["Next.js", "Web Audio", "Tailwind"],
-    href: "#",
+    oneLiner: "O painel de palco da sua banda.",
+    desc: "Um PWA mobile-first pra bandas no palco — setlists e cifras compartilhadas que viram a página pra todo mundo em tempo real, mesmo offline.",
+    stack: ["Elixir", "Phoenix LiveView", "PostgreSQL", "Tailwind"],
+    href: "https://stageboard.buildbyhenri.com",
   },
 ];
 
@@ -98,7 +81,7 @@ export const STRINGS = {
     },
     stack: {
       label: "Built with",
-      items: ["Next.js", "React Native", "Expo", "TypeScript", "tRPC", "PostgreSQL", "Supabase", "Tailwind"],
+      items: ["TypeScript", "React Native", "Flutter", "Go", "Python", "FastAPI", "Elixir", "Phoenix LiveView", "PostgreSQL", "MySQL"],
     },
     footer: { tag: "Built in Brazil, used worldwide" },
     apps: APPS_EN,
@@ -126,7 +109,7 @@ export const STRINGS = {
     },
     stack: {
       label: "Feito com",
-      items: ["Next.js", "React Native", "Expo", "TypeScript", "tRPC", "PostgreSQL", "Supabase", "Tailwind"],
+      items: ["TypeScript", "React Native", "Flutter", "Go", "Python", "FastAPI", "Elixir", "Phoenix LiveView", "PostgreSQL", "MySQL"],
     },
     footer: { tag: "Feito no Brasil, usado no mundo todo" },
     apps: APPS_PT,
