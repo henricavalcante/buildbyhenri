@@ -1096,6 +1096,15 @@ html[data-theme="dark"] .logo-item:hover {
   padding: 4px 8px;
   border-radius: 6px;
 }
+.about-portrait .portrait-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 .about-body p {
   font-size: 16px;
   line-height: 1.6;

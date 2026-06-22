@@ -10,7 +10,6 @@ export const BBH_STRINGS = {
       headline: "A studio of one that ships, scales, and fixes software for technical founders.",
       headlineItalic: "ships, scales, and fixes",
       sub: "Three focused practices, one engineer. Pick the one you need — I'll handle the rest as if your app were mine.",
-      availability: "now booking · jun 2026",
     },
     services: {
       eyebrow: "Practices",
@@ -77,7 +76,6 @@ export const BBH_STRINGS = {
       headline: "Um estúdio solo que entrega, escala e conserta software para fundadores técnicos.",
       headlineItalic: "entrega, escala e conserta",
       sub: "Três frentes de trabalho, um engenheiro só. Você escolhe a que precisa — do resto eu cuido como se o produto fosse meu.",
-      availability: "com agenda pra jun 2026",
     },
     services: {
       eyebrow: "Frentes",

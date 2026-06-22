@@ -81,12 +81,6 @@ function BBHHero({ s }) {
           <BBHHighlight text={s.hero.headline} italic={s.hero.headlineItalic} />
         </h1>
         <p className="hero-sub">{s.hero.sub}</p>
-        <div className="hero-foot">
-          <span className="availability">
-            <span className="dot"></span>
-            {s.hero.availability}
-          </span>
-        </div>
       </div>
     </section>
   );

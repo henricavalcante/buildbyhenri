@@ -505,8 +505,8 @@ function About({ s }) {
           </h2>
         </div>
         <div className="about-grid">
-          <div className="about-portrait" aria-hidden="true">
-            <span className="ph">{s.about.portrait}</span>
+          <div className="about-portrait">
+            <img className="portrait-img" src="/henri.jpg" alt="Henri Cavalcante" loading="lazy" />
           </div>
           <div className="about-body">
             <p>
