@@ -1,0 +1,26 @@
+/* ─────────── Games showcase — reuses the apps showcase styles ─────────── */
+@import "../apps/styles.css";
+
+/* Magenta accent — distinct from the hub orange and the other sections */
+:root {
+  --accent:    oklch(0.60 0.21 355);
+  --accent-ink: oklch(0.38 0.14 355);
+  --accent-soft: oklch(0.95 0.04 355);
+}
+html[data-theme="dark"] {
+  --accent:    oklch(0.74 0.16 355);
+  --accent-ink: oklch(0.95 0.05 355);
+  --accent-soft: oklch(0.30 0.09 355);
+}
+
+/* Screenshot thumbnails */
+.app-thumb img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.app-card:hover .app-thumb img { transform: scale(1.03); }
+
+.app-status[data-status="soon"] { color: var(--muted); border-style: dashed; }

@@ -87,11 +87,11 @@ function BBHHero({ s }) {
 }
 
 /* ────────── Service card ────────── */
-function BBHServiceCard({ item, visit }) {
+function BBHServiceCard({ item, total, visit }) {
   return (
     <a className="service-card" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener">
       <div className="service-head">
-        <span className="service-num">{item.n} / 03</span>
+        <span className="service-num">{item.n} / {String(total).padStart(2, "0")}</span>
         <span className="service-tag">{item.tag}</span>
       </div>
 
@@ -123,7 +123,7 @@ function BBHServices({ s }) {
       <div className="container">
         <div className="services-grid">
           {s.services.items.map((it) => (
-            <BBHServiceCard key={it.n} item={it} visit={s.services.visit} />
+            <BBHServiceCard key={it.n} item={it} total={s.services.items.length} visit={s.services.visit} />
           ))}
         </div>
       </div>

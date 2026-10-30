@@ -9,11 +9,11 @@ export const BBH_STRINGS = {
       eyebrow: "Henri Cavalcante — engineering studio",
       headline: "A studio of one that ships, scales, and fixes software for technical founders.",
       headlineItalic: "ships, scales, and fixes",
-      sub: "Three focused practices, one engineer. Pick the one you need — I'll handle the rest as if your app were mine.",
+      sub: "Four focused practices, one engineer. Pick the one you need — I'll handle the rest as if your app were mine.",
     },
     services: {
       eyebrow: "Practices",
-      title: "Three ways we can work together.",
+      title: "Four ways we can work together.",
       titleItalic: "work together.",
       items: [
         {
@@ -58,6 +58,20 @@ export const BBH_STRINGS = {
           ],
           cta: "Visit consulting.buildbyhenri.com",
         },
+        {
+          n: "04",
+          tag: "games.buildbyhenri.com",
+          href: "./games.html",
+          title: "BBH Games",
+          titleItalic: "Games",
+          oneLiner: "Cozy games that teach real-world skills while you play.",
+          bullets: [
+            "Printa — a 3D printing business tycoon",
+            "Cidade das Emoções — a city builder about well-being",
+            "No ads, no in-app purchases, no data collection",
+          ],
+          cta: "See the games",
+        },
       ],
       visit: "Visit",
     },
@@ -75,11 +89,11 @@ export const BBH_STRINGS = {
       eyebrow: "Henri Cavalcante — estúdio de engenharia",
       headline: "Um estúdio solo que entrega, escala e conserta software para fundadores técnicos.",
       headlineItalic: "entrega, escala e conserta",
-      sub: "Três frentes de trabalho, um engenheiro só. Você escolhe a que precisa — do resto eu cuido como se o produto fosse meu.",
+      sub: "Quatro frentes de trabalho, um engenheiro só. Você escolhe a que precisa — do resto eu cuido como se o produto fosse meu.",
     },
     services: {
       eyebrow: "Frentes",
-      title: "Três formas da gente trabalhar junto.",
+      title: "Quatro formas da gente trabalhar junto.",
       titleItalic: "trabalhar junto.",
       items: [
         {
@@ -123,6 +137,20 @@ export const BBH_STRINGS = {
             "Contratação e onboarding do primeiro time de engenharia",
           ],
           cta: "Acessar consulting.buildbyhenri.com",
+        },
+        {
+          n: "04",
+          tag: "games.buildbyhenri.com",
+          href: "./games.html",
+          title: "BBH Games",
+          titleItalic: "Games",
+          oneLiner: "Jogos aconchegantes que ensinam habilidades da vida real brincando.",
+          bullets: [
+            "Printa — tycoon de negócio de impressão 3D",
+            "Cidade das Emoções — construção de cidades sobre bem-estar",
+            "Sem anúncios, sem compras no app, sem coleta de dados",
+          ],
+          cta: "Ver os jogos",
         },
       ],
       visit: "Acessar",

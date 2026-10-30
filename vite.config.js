@@ -15,6 +15,7 @@ export default defineConfig({
         loadtests: resolve(__dirname, "loadtests.html"),
         consulting: resolve(__dirname, "consulting.html"),
         apps: resolve(__dirname, "apps.html"),
+        games: resolve(__dirname, "games.html"),
       },
     },
   },
